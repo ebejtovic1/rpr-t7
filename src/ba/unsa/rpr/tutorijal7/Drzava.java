@@ -11,6 +11,14 @@ public class Drzava {
         glavniGrad = new Grad();
     }
 
+    public Drzava(String nazivDrzave, int brojStanovnika, Double povrsinaDrzave, String jedinicaPovrsine, Grad pronadjiGrad) {
+        naziv=nazivDrzave;
+        brojStanovnika=brojStanovnika;
+        povrsina=povrsinaDrzave;
+        jedinicaZaPovrsinu=jedinicaPovrsine;
+        glavniGrad=pronadjiGrad;
+    }
+
     public String getNaziv() {
         return naziv;
     }

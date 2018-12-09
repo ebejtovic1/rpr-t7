@@ -20,6 +20,11 @@ public class Grad {
         brojStanovnika = 0;
     }
 
+    public Grad(String nazivGlavnog, int brojStanovnikaGlavnog, Object o) {
+        naziv=nazivGlavnog;
+        brojStanovnika=brojStanovnikaGlavnog;
+    }
+
     public String getNaziv() {
         return naziv;
     }
@@ -55,4 +60,6 @@ public class Grad {
         }
         return rezultat;
     }
+
+
 }

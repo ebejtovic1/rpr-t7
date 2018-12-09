@@ -1,11 +1,19 @@
 package ba.unsa.rpr.tutorijal7;
 
+import org.w3c.dom.*;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import java.beans.XMLEncoder;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 public class Tutorijal {
 
@@ -38,6 +46,50 @@ public class Tutorijal {
         izlaz.writeObject(drzave);
         izlaz.close();
     }
+    public static UN ucitajXml (ArrayList<Grad> gradovi) {
+        UN povratne_drzave = new UN();
+        ArrayList<Drzava> povratna = new ArrayList<Drzava>();
+        Document xmldoc = null;
+        try {
+            DocumentBuilder docReader = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+            xmldoc = docReader.parse(new File("drzave.xml"));
+            Element korijen = xmldoc.getDocumentElement();
+            NodeList djeca = korijen.getChildNodes();
+            for (int i = 0; i < djeca.getLength(); i++) {
+                Node drzave = djeca.item(i);
+                if (drzave instanceof Element && drzave.getNodeName().equals("#text")) continue;
+                if (drzave instanceof Element && ((Element) drzave).getTagName().equals("drzava")) {
+                    int brojStanovnika = Integer.parseInt(((Element) drzave).getAttribute("stanovnika"));
+                    String nazivDrzave = ((Element) drzave).getElementsByTagName("naziv").item(0).getTextContent();
+                    Double povrsinaDrzave = Double.parseDouble(((Element) drzave).getElementsByTagName("povrsina").item(0).getTextContent());
+                    String jedinicaPovrsine = ((Element) ((Element) drzave).getElementsByTagName("povrsina").item(0)).getAttribute("jedinica");
+                    NodeList glavni = ((Element) drzave).getElementsByTagName("glavnigrad");
+                    String nazivGlavnog = ((Element) glavni.item(0)).getElementsByTagName("naziv").item(0).getTextContent();
+                    int brojStanovnikaGlavnog = Integer.parseInt(((Element) glavni.item(0)).getAttribute("stanovnika"));
+                    double[] temperatureGlavnog = new double[1000];
+                    Grad pronadjiGrad = null;
+                    for (Grad pomocna : gradovi) {
+                        if (pomocna.getNaziv().equals(nazivGlavnog)) {
+                            pronadjiGrad = pomocna;
+                            temperatureGlavnog = pomocna.getTemperature();
+                            pomocna.setBrojStanovnika(brojStanovnikaGlavnog);
+                            break;
+                        }
+                    }
+                    if (pronadjiGrad != null )
+                        povratna.add(new Drzava(nazivDrzave,brojStanovnika,povrsinaDrzave,jedinicaPovrsine,pronadjiGrad));
+                    else
+                        povratna.add(new Drzava(nazivDrzave,brojStanovnika,povrsinaDrzave,jedinicaPovrsine,new Grad(nazivGlavnog,brojStanovnikaGlavnog,null)));
+                }
+            }
+        }
+        catch (Exception e) {
+            throw new IllegalArgumentException("drzave.xml nije validan XML dokument");
+        }
+        povratne_drzave.setDrzave(povratna);
+        return povratne_drzave;
+    }
+
     public static void main(String[] args) throws FileNotFoundException {
         ArrayList<Grad> rez=new ArrayList<Grad>();
 
