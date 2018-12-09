@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<drzave>
+    <drzava stanovnika="3500000">
+        <naziv>Bosna i Hercegovina</naziv>
+        <glavnigrad stanovnika="400000">
+            <naziv>Sarajevo</naziv>
+        </glavnigrad>
+        <povrsina jedinica="km2">51129</povrsina>
+    </drzava>
+    <drzava stanovnika="151449646">
+        <naziv>Austrija</naziv>
+        <glavnigrad stanovnika="5485645">
+            <naziv>Beč</naziv>
+        </glavnigrad>
+        <povrsina jedinica="km2">123564</povrsina>
+    </drzava>
+    <drzava stanovnika="1234567989">
+        <naziv>Indija</naziv>
+        <glavnigrad stanovnika="34554616">
+            <naziv>New Delhi</naziv>
+        </glavnigrad>
+        <povrsina jedinica="km2">3553487</povrsina>
+    </drzava>
+    <drzava stanovnika="1237989">
+        <naziv>Hrvatska</naziv>
+        <glavnigrad stanovnika="54616">
+            <naziv>Zagreb</naziv>
+        </glavnigrad>
+        <povrsina jedinica="km2">44487</povrsina>
+    </drzava>
+    <drzava stanovnika="54954989">
+        <naziv>Njemačka</naziv>
+        <glavnigrad stanovnika="34554616">
+            <naziv>Berlin</naziv>
+        </glavnigrad>
+        <povrsina jedinica="km2">7874187</povrsina>
+    </drzava>
+    <drzava stanovnika="1234567989">
+        <naziv>Makedonija</naziv>
+        <glavnigrad stanovnika="55445">
+            <naziv>Skoplje</naziv>
+        </glavnigrad>
+        <povrsina jedinica="km2">44487</povrsina>
+    </drzava>
+</drzave>
