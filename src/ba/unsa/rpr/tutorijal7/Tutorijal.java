@@ -101,6 +101,9 @@ public class Tutorijal {
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         }
+        UN novi=new UN();
+        novi=ucitajXml(rez);
+        zapisiXml(novi);
         Grad g1=rez.get(0);
         Grad g2=rez.get(1);
         Drzava drzava=new Drzava();
@@ -120,7 +123,7 @@ public class Tutorijal {
         UN drz=new UN();
         drz.dodajDrzavu(drzava);
         drz.dodajDrzavu(drzava1);
-        zapisiXml(drz);
+        //zapisiXml(drz);
 
 
     }
