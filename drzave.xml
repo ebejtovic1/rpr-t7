@@ -15,9 +15,9 @@
         <povrsina jedinica="km2">123564</povrsina>
     </drzava>
     <drzava stanovnika="1234567989">
-        <naziv>Indija</naziv>
+        <naziv>Srbija</naziv>
         <glavnigrad stanovnika="34554616">
-            <naziv>New Delhi</naziv>
+            <naziv>Beograd</naziv>
         </glavnigrad>
         <povrsina jedinica="km2">3553487</povrsina>
     </drzava>
