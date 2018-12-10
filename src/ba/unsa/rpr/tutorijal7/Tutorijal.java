@@ -123,7 +123,7 @@ public class Tutorijal {
         UN drz=new UN();
         drz.dodajDrzavu(drzava);
         drz.dodajDrzavu(drzava1);
-        //zapisiXml(drz);
+        zapisiXml(drz);
 
 
     }

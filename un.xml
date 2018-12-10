@@ -4,6 +4,9 @@
   <void property="drzave">
    <void method="add">
     <object class="ba.unsa.rpr.tutorijal7.Drzava" id="Drzava0">
+     <void property="brojStanovnika">
+      <int>45525</int>
+     </void>
      <void id="Grad0" property="glavniGrad">
       <void property="brojStanovnika">
        <int>400000</int>
@@ -30,133 +33,60 @@
       </void>
      </void>
      <void property="jedinicaZaPovrsinu">
-      <string>km2</string>
+      <string>km</string>
      </void>
      <void property="naziv">
-      <string>Bosna i Hercegovina</string>
+      <string>Bih</string>
      </void>
      <void property="povrsina">
-      <double>51129.0</double>
+      <double>25525.0</double>
      </void>
     </object>
    </void>
    <void method="add">
     <object class="ba.unsa.rpr.tutorijal7.Drzava" id="Drzava1">
-     <void property="glavniGrad">
-      <void property="brojStanovnika">
-       <int>5485645</int>
-      </void>
+     <void property="brojStanovnika">
+      <int>455</int>
+     </void>
+     <void id="Grad1" property="glavniGrad">
       <void property="naziv">
-       <string>Beč</string>
+       <string>Banja Luka</string>
       </void>
       <void property="temperature">
-       <null/>
+       <void index="0">
+        <double>8.7</double>
+       </void>
+       <void index="1">
+        <double>20.1</double>
+       </void>
+       <void index="2">
+        <double>5.6</double>
+       </void>
+       <void index="3">
+        <double>4.3</double>
+       </void>
+       <void index="4">
+        <double>2.2</double>
+       </void>
+       <void index="5">
+        <double>1.1</double>
+       </void>
+       <void index="6">
+        <double>-2.2</double>
+       </void>
+       <void index="7">
+        <double>-8.777</double>
+       </void>
       </void>
      </void>
      <void property="jedinicaZaPovrsinu">
-      <string>km2</string>
+      <string>km</string>
      </void>
      <void property="naziv">
-      <string>Austrija</string>
+      <string>BH</string>
      </void>
      <void property="povrsina">
-      <double>123564.0</double>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="ba.unsa.rpr.tutorijal7.Drzava" id="Drzava2">
-     <void property="glavniGrad">
-      <void property="brojStanovnika">
-       <int>34554616</int>
-      </void>
-      <void property="naziv">
-       <string>New Delhi</string>
-      </void>
-      <void property="temperature">
-       <null/>
-      </void>
-     </void>
-     <void property="jedinicaZaPovrsinu">
-      <string>km2</string>
-     </void>
-     <void property="naziv">
-      <string>Indija</string>
-     </void>
-     <void property="povrsina">
-      <double>3553487.0</double>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="ba.unsa.rpr.tutorijal7.Drzava" id="Drzava3">
-     <void property="glavniGrad">
-      <void property="brojStanovnika">
-       <int>54616</int>
-      </void>
-      <void property="naziv">
-       <string>Zagreb</string>
-      </void>
-      <void property="temperature">
-       <null/>
-      </void>
-     </void>
-     <void property="jedinicaZaPovrsinu">
-      <string>km2</string>
-     </void>
-     <void property="naziv">
-      <string>Hrvatska</string>
-     </void>
-     <void property="povrsina">
-      <double>44487.0</double>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="ba.unsa.rpr.tutorijal7.Drzava" id="Drzava4">
-     <void property="glavniGrad">
-      <void property="brojStanovnika">
-       <int>34554616</int>
-      </void>
-      <void property="naziv">
-       <string>Berlin</string>
-      </void>
-      <void property="temperature">
-       <null/>
-      </void>
-     </void>
-     <void property="jedinicaZaPovrsinu">
-      <string>km2</string>
-     </void>
-     <void property="naziv">
-      <string>Njemačka</string>
-     </void>
-     <void property="povrsina">
-      <double>7874187.0</double>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="ba.unsa.rpr.tutorijal7.Drzava" id="Drzava5">
-     <void property="glavniGrad">
-      <void property="brojStanovnika">
-       <int>55445</int>
-      </void>
-      <void property="naziv">
-       <string>Skoplje</string>
-      </void>
-      <void property="temperature">
-       <null/>
-      </void>
-     </void>
-     <void property="jedinicaZaPovrsinu">
-      <string>km2</string>
-     </void>
-     <void property="naziv">
-      <string>Makedonija</string>
-     </void>
-     <void property="povrsina">
-      <double>44487.0</double>
+      <double>225.0</double>
      </void>
     </object>
    </void>
